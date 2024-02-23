@@ -15,7 +15,7 @@ pipeline {
                     echo "Maven executable: ${MAVEN_EXECUTABLE}"
                     
                     // log version of maven
-                    bat '"${MAVEN_EXECUTABLE}" --version'
+                    bat 'mvn --version'
 
                     // build projet using maven
                     bat "${MAVEN_EXECUTABLE} clean package -nsu -DskipMunitTests"
