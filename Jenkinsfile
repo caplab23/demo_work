@@ -15,10 +15,10 @@ pipeline {
                     echo "Maven executable: ${MAVEN_EXECUTABLE}"
                     
                     // log version of maven
-                    bat "${MAVEN_EXECUTABLE} --version"
+                    bat "\"${MAVEN_EXECUTABLE}\" --version"
 
                     // build projet using maven
-                    bat "${MAVEN_EXECUTABLE} clean package -nsu -DskipMunitTests"
+                    bat "\"${MAVEN_EXECUTABLE}\" clean package -nsu -DskipMunitTests"
                 }
             }
         }
@@ -26,14 +26,14 @@ pipeline {
         stage('Test') {
             steps {
                 // test project
-                bat "${MAVEN_EXECUTABLE} clean test -nsu"
+                bat "\"${MAVEN_EXECUTABLE}\" clean test -nsu"
             }
         }
 
         stage('Deploying to cloudhub') {
             steps {
                 // pdeploiong on cloudhub
-                bat "${MAVEN_EXECUTABLE} clean deploy -DskipMunitTests -DmuleDeploy"
+                bat "\"${MAVEN_EXECUTABLE}\" clean deploy -DskipMunitTests -DmuleDeploy"
             }
         }
     }
