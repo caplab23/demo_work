@@ -36,7 +36,7 @@
 			                        <muleVersion>4.5.0</muleVersion>
 			                        <username>adama5555</username>
 			                        <password>#Adamadev232</password>
-			                        <applicationName>demoa</applicationName>
+			                        <applicationName>demowork</applicationName>
 			                        <environment>Sandbox</environment>
 			                        <workers>1</workers>
 			                </cloudHubDeployment>
