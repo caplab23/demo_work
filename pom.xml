@@ -31,6 +31,16 @@
 				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-application</classifier>
+					<cloudHubDeployment>
+			                        <uri>https://anypoint.mulesoft.com</uri>
+			                        <muleVersion>4.4.0</muleVersion>
+			                        <username>adama5555</username>
+			                        <password>#Adamadev232</password>
+			                        <applicationName>demoWork</applicationName>
+			                        <environment>Sandbox</environment>
+			                        <workers>1</workers>
+			                </cloudHubDeployment>
+					
 				</configuration>
 			</plugin>
 		</plugins>
